@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us" id="atomic">
+    <head>
+        <meta charset="utf-8">
+        <title>Atomic css | Home Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bundle.css" />
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/oldie.css" />
+        <![endif]-->
+        <style>
+            #splash {
+                min-height: 360px;
+                background-image:url(images/background.png);
+            }
+        </style>
+    </head>
+    <body class="home Mih-100%">
+        <div class="wrapper Bxz-bb Mih-100%">
+            <div id="header" role="header" class="P-10 Ov-h Z-7 Pos-r Bgc-logo OptLegibility">
+            <div class="innerwrapper OppositeBoxes Mx-a--sm W-80%--sm W-a--sm">
+                <a id="home" class="D-ib Va-m Fz-20 Lh-12 C-fff Td-n:h" href="index.html">
+                    ACSS.io
+                </a>
+                <ul role="navigation" class="D-ib Va-m Reset">
+                    <li class="D-ib Va-m Pos-r">
+                        <a class="D-b C-fff Td-n:h" href="docs.html"><b class="Pos-r">DOCS</b></a>
+                    </li><!--
+                    --><li class="D-ib Mstart-10 Va-m Pos-r">
+                        <a class="D-b C-fff Td-n:h" href="#0"><b class="Pos-r">REFERENCE</b></a>
+                    </li><!--
+                    --><li class="D-ib Mstart-10 Va-m Pos-r">
+                        <a class="D-b C-fff Td-n:h" href="#0"><b class="Pos-r">FAQ</b></a>
+                    </li><!--
+                    --><li class="D-ib Mstart-10 Pos-r">
+                        <a class="D-b C-fff Td-n:h" href="#0">
+                            <img class="Va-m Pos-r" alt="GitHub" width="30" src="images/github-logo.png" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- /header -->
+            <div id="splash" class="D-tb W-100% Bdb-1">
+                <div class="D-tbc Ta-c Va-m">
+                    <h1 class="Mx-a W-50% Pos-r Ov-h">
+                        <![if lt IE 9]>
+                        <img class="Start-0 Pos-a Pos-r--sm"
+                             alt="atomic css"
+                             src="images/atomic-css-logo.svg" />
+                        <![endif]>
+                        <!--[if lt IE 9]>
+                        <img class=""
+                             alt="atomic css"
+                             src="images/atomic-css-logo.png" />
+                        <![endif]-->
+                    </h1>
+                    <p class="My-20">Build WTF you want <sup>TM</sup></p>
+                    <p>
+                        <a class="D-ib Mb-10 P-20 C-fff Bgc-logo Bdrs-100 Td-n:h OptLegibility" href="docs.html">Get Started</a>
+                    </p>
+                </div>
+            </div><!-- /splash -->
+            <div role="main" class="innerwrapper Bxz-bb Pt-20 Mb-50 Px-10 Mx-a--sm W-80%--sm W-a">
+                <h1 id="features">Features</h1>
+                <p>If you're looking for deep dive into how we made Flux isomorphic, take a look at <a href="/guides/bringing-flux-to-the-server.html">Bringing Flux to the Server</a>. But here's the high level overview of what we provide.</p>
+                <h2 id="store-isolation">Store Isolation</h2>
+                <p><a href="/guides/stores.html">Stores</a> are classes that are instantiated per request or client session. This ensures that the stores are isolated and do not bleed information between requests.</p>
+                <h2 id="dehydration-rehydration">Dehydration/Rehydration</h2>
+                <p><a href="/guides/stores.html">Stores</a> can provide <code>dehydrate</code> and <code>rehydrate</code> so that you can propagate the initial server state to the client.</p>
+                <h2 id="flow-regulation">Flow Regulation</h2>
+                <p>Fluxible restricts access to your Flux methods so that you can't break out of the unidirectional flow. Three contexts exist:</p>
+                <ul>
+                <li><strong>Action Context</strong>: interface accessible by action creator methods. Passed as first parameter to all action creators.</li>
+                <li><strong>Component Context</strong>: interface accessible by React components. Should be passed as prop to top level React component and then propagated to child components that require acess to it.</li>
+                <li><strong>Store Context</strong>: interface accessible by stores. Passed as first parameter to all stores. See <a href="https://github.com/yahoo/dispatchr#constructor-1">Dispatchr</a> docs.</li>
+                </ul>
+                <h2 id="pluggable">Pluggable</h2>
+                <p>Want to add your own interfaces to the Flux flow? <a href="/guides/plugins.html">Plugins</a> allow you to add methods to any of the contexts.</p>
+</div><!-- /innerwrapper -->
+        </div><!-- /wrapper -->
+        <div id="footer" class="OppositeBoxes P-20 Bdt-1" role="footer">
+            <small class="D-ib">All code on this site is licensed under the <a href="https://github.com/yahoo/fluxible.io/blob/master/LICENSE.md">Yahoo BSD License</a>, unless otherwise stated.</small>
+            <small class="D-ib">© 2015 Yahoo! Inc. All rights reserved.</small>
+        </div><!-- /footer -->
+    </body>
+</html>
